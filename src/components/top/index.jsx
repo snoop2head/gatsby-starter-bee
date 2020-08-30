@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { GitHubIcon } from '../social-share/github-icon'
+import { AiOutlineSearch } from 'react-icons/ai'
 
 import './index.scss'
 
@@ -13,7 +14,9 @@ export const Top = ({ title, location, rootPath }) => {
           {title}
         </Link>
       )}
-      <GitHubIcon />
+      <Link to={`/search`}>
+        <AiOutlineSearch />
+      </Link>
     </div>
   )
 }
