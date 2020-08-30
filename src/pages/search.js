@@ -73,12 +73,11 @@ export default ({ data, location }) => {
       const filteredData = posts.filter(post => {
         const searchQuery = query.toLowerCase().trim()
         const {
-          rawMarkdownBody,
+          excerpt,
           frontmatter: { title },
         } = post.node
         return (
-          (rawMarkdownBody &&
-            rawMarkdownBody.toLowerCase().includes(searchQuery)) ||
+          (excerpt && excerpt.toLowerCase().includes(searchQuery)) ||
           (title && title.toLowerCase().includes(searchQuery))
         )
       })
