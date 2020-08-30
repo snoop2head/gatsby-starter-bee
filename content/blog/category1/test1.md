@@ -5,4 +5,4 @@ category: 'category1'
 draft: false
 ---
 
-Test1
+한국어 excerpt 테스트
